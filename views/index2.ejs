@@ -1,0 +1,33 @@
+<%- include("partials/header.ejs") %>
+
+
+<div class="grid-container">
+    
+    <div class="item one1"><h1>CockMix With Tales</h1></div>
+    <div class="item two2"><div class="">~Make your tales with cocktails~</div></div>
+    <div class="item three3"><img src="/images/Main_img.png" class="img-fluid" alt="cocktail image" ></div>
+</div>
+
+<section class="twoo">
+    <div class="container j1">
+        <div class="search_icon"> <h1>Search By<img src="/images/search_icon.png" alt="" srcset=""></h1></div>
+        <form action="/" method="POST" class="buttons">
+            <button type="submit" value="RandomCocktail" name="choice" class="btn" formaction="/random">Lookup a random Cocktail</button><br>
+            <button type="submit" value="CocktailNameSearch" name="choice" class="btn" formaction="/cocktail_name">Search cocktail by Name</button><br>
+            <button type="submit" value="IngredientNameSearch" name="choice" class="btn" formaction="/ingredient_name">Search by Ingredient</button><br>
+            <button type="submit" value="FirstLetterCocktails" name="choice" class="btn" formaction="/by_first_letter">Search by First letter</button><br>
+            <button type="submit" value="IngredientsList" name="choice" class="btn" formaction="/ingredient_list">Ingredients List</button><br>
+            <button type="submit" value="AlcoholicCocktails" name="choice" class="btn" formaction="/alcohol">List of Alcoholic Cocktails</button><br>
+            <button type="submit" value="NonAlcoholicCocktails" name="choice" class="btn" formaction="/noalcohol">List of Non-Alcoholic Cocktails</button><br><br><br>
+        </form>
+    </div>
+</section>
+
+
+
+<%- include("partials/footer.ejs") %>
+
+
+
+
+

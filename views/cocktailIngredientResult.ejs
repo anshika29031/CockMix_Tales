@@ -1,0 +1,45 @@
+<%- include("partials/header2.ejs") %>
+
+<br><br><br><br>
+
+<div class="flex-container-cn">
+    <p>Search By Ingredient Name of a Cocktail</p>
+    <form action="/ingredient_name_result" method="post">
+        <input type="text" name="cocktailrequested" placeholder="Ingredient Name" class="takinginput" required><br>
+        <button type="submit" value="CocktailNameSearch" name="choice" class="custombutton">SEARCH</button><br>
+    </form>
+ </div>
+<br><br>
+
+<% if(locals.cocktails){ %>
+<div class="container">
+<div class="row f0">
+    <% for(var loop=0;loop<Length;loop++){ %>
+    <div class="col-6 col-md-4 col-lg-3 col-xl-2 f2">
+        <a href="/getcocktail/<%= cocktails[loop].strDrink %>" class="textdecor">
+        <div class="row">
+                <%  var i =  cocktails[loop].strDrinkThumb  +"/preview" %>
+                <img src=<%= i %> class="g3" alt="cocktail image">
+            <div class="row"><h1 class="g4"><%= cocktails[loop].strDrink %></h1></div>
+            <% var cocktailrequested = cocktails[loop].strDrink %>
+        </div>
+        </a>
+    </div>
+    <% } %>
+</div>
+</div>
+
+<%  } else { %>
+    <br><br>
+    <div class="flex-container-cn">
+        <p>TRY AGAIN ! </p><br><br>
+    </div>
+
+<% } %>
+
+
+
+ <br><br><br><br>
+
+<%- include("partials/footer.ejs") %>
+

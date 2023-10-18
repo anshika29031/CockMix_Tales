@@ -1,0 +1,31 @@
+<%- include("partials/header2.ejs") %>
+<br><br><br><br><br><br>
+
+<h1 class="flex-container-cn">Ingredients</h1><br><hr class="i5"><hr class="i5">
+<br>
+
+<% if(locals.cocktails){ %>
+<div class="container">
+    <div class="row i4">
+        <% for(var p=0;p<Length;p++){ %>
+        <div class="col-10 col-sm-5  col-md-3 i2">
+            <a href="/ingredient_name_result2/<%= cocktails[p].strIngredient1 %>" class="i1">
+                <p class=""><%= cocktails[p].strIngredient1 %></p>
+            </a>
+        </div>
+        <% } %>
+    </div>
+</div>
+
+<%  } else { %>
+    <br><br>
+    <div class="flex-container-cn">
+        <p>TRY AGAIN ! </p><br><br>
+    </div>
+
+<% } %>
+
+<br><br><br><br>
+
+
+<%- include("partials/footer.ejs") %>
